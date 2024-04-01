@@ -80,6 +80,7 @@ def print_tour(parent, total_vertices):
 def generate_random_complete_graph(n):
     return [[random.randint(1, 100) if i != j else 0 for j in range(n)] for i in range(n)]
 
+
 # Función para probar diferentes matrices de distancia y recolectar los tiempos de ejecución
 def test_and_plot(graph_sizes):
     execution_times = []
