@@ -58,3 +58,54 @@ Con lo que podemos concluir que el algoritmo tiene complejidad $$O(n!)$$
 
 
 ## Dynamic Programming
+### Análisis teórico
+
+Considérese la siguiente matriz de distancias
+
+||0 |1|2|3
+|--|--|--|--|--|
+| 0 | 0 |1|15|6
+| 1 | 2 |0|7|3
+| 2 | 9 |6|0|12
+| 3 | 10 |4|8|0
+
+**Iniciando desde vertex 0**
+
+Posibles subsets: 
+
+	 - 0
+	 - {1}, {2}, {3}
+	 - {1,2}, {2,3}, {1,3}
+	 - {1,2,3}
+
+**Cálculo de costos:** 
+
+|  |  Cost|Parent
+|--|--|--|
+| [1,0] |1  |0
+| [2,0] |15  |0
+| [3,0] |6  |0
+| [2,{1}] |1+7 = 8  |1
+| [3,{1}] |1+3 = 4  |1
+| [1,{2}] |15+6 = 21  |2
+| [3,{2}] |15+12 = 27  |2
+| [1,{3}] |6+4 = 10  |3
+| [2,{3}] |6+8 = 14  |3
+| [3,{1,2}] |min[3+21, 12+8] = 20  |2
+| [3,{1,2}] |min[3+21, 12+8] = 20  |2
+| [1,{2,3}] |min[6+14, 4+27] = 20  |2
+| [2,{1,3}] |min[7+10, 8+4] = 12  |3
+| [0,{1,2,3}] |min[2+20, 9+12, 10+20] = 21  |2
+
+
+**Tour:** 
+0 -> 2 -> 3 -> 1 -> 0
+
+**Entonces:** 
+
+$$T(n)=O(2^{n} n^{2})$$
+
+Donde 
+$$2^{n} $$ es el número exponencial de subsets
+Y 
+$$n^{2}$$ se debe a verificar cuál debería de ser el vértice anterior del vértice actual
