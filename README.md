@@ -35,13 +35,17 @@ Entonces,
         tenemos $n$ problemas (nodos) en el grafo completo, y cada problema (nodo) tiene $n-1$ subconjuntos posibles de problemas (nodos), esto podría expresarse como $T(n-1)$. Además, la recurrencia está dentro de un ciclo \textbf{for}. Las demás partes del algoritmo o son $\Theta(1)$ o $\Theta(n)$ podemos concluir que la recurrencia de este algoritmo es 
 $$T(n)=nT\left(n-1\right)+\Theta(n)$$
 
-    Siendo más formalistas, tenemos 
-    $$T(n)=\begin{cases}
+    Siendo más formalistas, tenemos
+
+```math
+ $$T(n)=\begin{cases}
             \Theta(1),& n=1\\
             T(n)=nT(n-1)+\Theta(n), & n>1
         \end{cases}$$
-    
-    Ahora, usando la técnica del árbol de recursión, tenemos: 
+
+```    
+
+Ahora, usando la técnica del árbol de recursión, tenemos: 
     
 ![enter image description here](https://cdn.discordapp.com/attachments/717418780065529856/1224417430303014922/663ecfa7-bb48-4381-94a6-ad495d51b84b.png?ex=661d6a97&is=660af597&hm=7ea58fb3d40e7bfcc12bfbea44076f0319860412da09e4ea2ba70e63e65520e2&)
 
