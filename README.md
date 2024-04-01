@@ -28,11 +28,11 @@ Entonces,
 - Divide-Conquer-Combine:
   - **Divide**: Es la parte en el que el problema se divide en subproblemas. En este caso tenemos al **for** que itera a cada **edge** y el condicional `if (edge not in visited)` el cual subdivide el problema a los *edges* no visitados.
   - **Conquer**: En esta parte es donde se ejecutan las llamadas recursivas. En este caso particular es cuando se ejecuta `tsp(G, start, edge, visited + [edge])`
-  - **Combine**: Aquí es donde se juntas las llamadas recursivas, es decir, en este algoritmo es la parte en donde se agregan a la lista de costos: `costs.append(G[node][edge]+tsp(G, start, edge, visited + [edge]))`
+  - **Combine**: Aquí es donde se juntan las llamadas recursivas, es decir, en este algoritmo es la parte en donde se agregan a la lista de costos: `costs.append(G[node][edge]+tsp(G, start, edge, visited + [edge]))`
 
 - Relación de recurrencia de su tiempo de ejecución:
   - Aquí notamos que hay diversas parte del algoritmo que debemos tomar en cuenta,
-        tenemos $n$ problemas (nodos) en el grafo completo, y cada problema (nodo) tiene $n-1$ subconjuntos posibles de problemas (nodos), esto podría expresarse como $T(n-1)$. Además, la recurrencia está dentro de un ciclo \textbf{for}. Las demás partes del algoritmo o son $\Theta(1)$ o $\Theta(n)$ podemos concluir que la recurrencia de este algoritmo es 
+        tenemos $n$ problemas (nodos) en el grafo completo, y cada problema (nodo) tiene $n-1$ subconjuntos posibles de problemas (nodos), esto podría expresarse como $T(n-1)$. Además, la recurrencia está dentro de un ciclo $\textbf{for}$. Las demás partes del algoritmo o son $\Theta(1)$ o $\Theta(n)$ podemos concluir que la recurrencia de este algoritmo es 
 $$T(n)=nT\left(n-1\right)+\Theta(n)$$
 
     Siendo más formalistas, tenemos
