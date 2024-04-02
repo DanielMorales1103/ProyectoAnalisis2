@@ -66,7 +66,7 @@ def generate_random_complete_graph(n):
 ```
 
 Gráfica
-
+![enter image description here](https://cdn.discordapp.com/attachments/717418780065529856/1224518856546975774/WhatsApp_Image_2024-04-01_at_18.29.29.jpeg?ex=661dc90d&is=660b540d&hm=c3cf9d94f225bf4db8a3de489e76ef11d957f27df13cb4a29041638bc9ab6c0d&)
 
 ## Dynamic Programming
 ### Análisis teórico
@@ -123,9 +123,11 @@ $$n^{2}$$ se debe a verificar cuál debería de ser el vértice anterior del vé
 
 ### Análisis empirico
 Gráfica
-
+![enter image description here](https://cdn.discordapp.com/attachments/717418780065529856/1224519099736920165/WhatsApp_Image_2024-04-01_at_18.29.42.jpeg?ex=661dc947&is=660b5447&hm=665300f50aeb6ab2af336158813e298d8a43349ff0a35cc31c06d0a71920c86e&)
 
 ## Comparación y conclusiones
+
+![enter image description here](https://cdn.discordapp.com/attachments/717418780065529856/1224519303517179934/WhatsApp_Image_2024-04-01_at_18.30.39.jpeg?ex=661dc978&is=660b5478&hm=cbe4bf75104de878a02e400cfed7647beb0740faf788417ca11248e185a1342a&)
 
 Los tiempos de ejecución empíricos obtenidos a partir de la ejecución del algoritmo son consistentes con la complejidad factorial $$O(n!)$$ que descrito en el análisis teórico. Específicamente, observamos que el tiempo de ejecución se mantiene bastante manejable para grafos pequeños, pero aumenta de manera explosiva a medida que el número de nodos crece. 
 
