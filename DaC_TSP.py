@@ -19,8 +19,8 @@ def tsp(G, start, node, visited):
 
 # grafo completo aleatorio con pesos en los bordes
 def generate_random_complete_graph(n):
-    return [[random.randint(1, 100) if i != j else 0 for j in range(n)] for i in range(n)]
-
+    return [[random.randint(1, 80) if i != j else 0 for j in range(n)] for i in range(n)]
+   
 # Generar 30 entradas de prueba
 test_cases = [generate_random_complete_graph(n) for n in range(2, 12)] # Reducido a 10 para viabilidad
 
@@ -29,11 +29,13 @@ times = []
 nodes_count = []
 
 for i, G in enumerate(test_cases, start=2):
+    print(i)
     start_time = time.time()
     min_cost = tsp(G, 0, 0, [0])
     end_time = time.time()
     times.append(end_time - start_time)
     nodes_count.append(i)
+    
 
 # Graficar los tiempos de ejecución
 plt.figure(figsize=(10, 5))

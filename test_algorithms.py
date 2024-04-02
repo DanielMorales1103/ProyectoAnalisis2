@@ -6,7 +6,7 @@ from DaC_TSP import tsp
 from DP_TSP import min_cost
 
 def generate_random_complete_graph(n):
-    return [[random.randint(1, 100) if i != j else 0 for j in range(n)] for i in range(n)]
+    return [[random.randint(1, 80) if i != j else 0 for j in range(n)] for i in range(n)]
 def test_algorithms(graph_sizes):
     times_recursive = []
     times_dp = []

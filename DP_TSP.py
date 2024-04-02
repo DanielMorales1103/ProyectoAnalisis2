@@ -78,7 +78,7 @@ def print_tour(parent, total_vertices):
 
 # Generador de grafos completos con pesos aleatorios
 def generate_random_complete_graph(n):
-    return [[random.randint(1, 100) if i != j else 0 for j in range(n)] for i in range(n)]
+    return [[random.randint(1, 80) if i != j else 0 for j in range(n)] for i in range(n)]
 
 
 # Función para probar diferentes matrices de distancia y recolectar los tiempos de ejecución
@@ -99,5 +99,5 @@ def test_and_plot(graph_sizes):
     plt.grid(True)
     plt.show()
 
-graph_sizes = range(2, 11)  # grafos de tamaño 2 a 10
+graph_sizes = range(2, 12)  # grafos de tamaño 2 a 10
 test_and_plot(graph_sizes)
